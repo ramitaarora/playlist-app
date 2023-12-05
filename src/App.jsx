@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import Nav from './components/Nav';
+import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import SearchResults from './components/SearchResults';
-import Tracklist from './components/Tracklist';
 import Playlist from './components/Playlist';
 
 function App() {
@@ -12,11 +11,10 @@ function App() {
 
   return (
     <div>
-      <Nav />
+      <Header />
       <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} searchResults={searchResults} setSearchResults={setSearchResults} />
-      <div id="search-results">
+      <div id="container">
         <SearchResults  />
-        <Tracklist />
         <Playlist />
       </div>
     </div>
