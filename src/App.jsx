@@ -6,13 +6,15 @@ import SearchResults from './components/SearchResults';
 import Playlist from './components/Playlist';
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setSearchResults] = useState();
 
   return (
     <div>
       <Nav />
-      <SearchBar />
+      <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} searchResults={searchResults} setSearchResults={setSearchResults} />
       <div id="search-results">
-        <SearchResults />
+        <SearchResults  />
         <Playlist />
       </div>
     </div>
